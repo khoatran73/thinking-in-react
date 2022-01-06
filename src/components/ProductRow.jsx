@@ -8,7 +8,12 @@ function ProductRow(props) {
                     ? <td style={{ color: "red" }}>{props.name}</td>
                     : <td>{props.name}</td>
             }
-            <td>{props.price}</td>
+            {
+                !props.stocked
+                    ? <td style={{ color: "red" }}>{props.price}</td>
+                    : <td>{props.price}</td>
+            }
+            
         </tr>
     )
 }

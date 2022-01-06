@@ -3,6 +3,7 @@ import ProductTable from "./components/ProductTable"
 import SearchBar from "./components/SearchBar"
 import products from "./products"
 import { useState } from 'react'
+import "./index.css"
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     }
 
     return (
-        <>
+        <div className="wrapper">
             <SearchBar
                 onFilterChange={handleFilterChange}
                 onStockChange={handleStockChange}
@@ -28,7 +29,7 @@ function App() {
                 filter={filter}
                 isStockOnly={isStockOnly}
             />
-        </>
+        </div>
     )
 }
 
